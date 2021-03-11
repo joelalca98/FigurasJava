@@ -1,12 +1,23 @@
-public class Circulo extends Figurita {
+public class Circulo extends Figura {
+
     private double radio;
 
-    public Circulo (double r) { this.radio = radio;}
+    public Circulo (double r)
+    {
+        this.radio = r;
+    }
 
-    public double are () { return Math.PI * Math.pow (this.radio, 2.0D); }
-    public String toString () { return "Circulo radio:" + this.radio + "area ((" + this.area() + " ))" ;}
+    public double area()
+    {
+        double resultado;
 
-    public double area() {
-        return 0;
+        resultado = Math.PI * Math.pow (this.radio, 2.0);
+
+        return Math.round(resultado*100)/100d;
+    }
+
+    public String toString()
+    {
+        return "Circulo area = "+ this.area();
     }
 }

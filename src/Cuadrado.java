@@ -1,8 +1,12 @@
-public class Cuadrado extends Figurita {
+public class Cuadrado extends Rectangulo {
 
-    private double lado;
+    public Cuadrado (double lado)
+    {
+        super(lado,lado);
+    }
 
-    public Cuadrado (double lado) { this.lado = lado; }
-
-    public double area() { return this.lado * this.lado; }
+    public String toString()
+    {
+        return "Cuadrado area = "+ this.area();
+    }
 }
